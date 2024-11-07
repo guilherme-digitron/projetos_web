@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+/*_*/
+
+.corpo
+{
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+}
+
+.vitrine
+{
+
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: bisque;
+    height: 100dvh;
+    width: 60%;
+
+
+}
+
+.modal-inteiro
+{
+
+    height: auto;
+    width: auto;
+    margin: 1rem;
+
+}
+
+.produto
+{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 150px;
+    background-color: bisque;
+
+
+
+}
+
+
+#btn1
+{
+
+    width: 100%;
+    border-radius: 0 0 8px 8px;
+
+
+
+}
+
+.img 
+{
+
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    border-radius: 8px 8px 0 0;
+
+
+}
+
+a
+{
+
+    color: white;
+    text-decoration: none;
+
+}
+
+.img-modal-aberto
+{
+
+    background-color: aquamarine;
+    width: 100%;
+    height: 100%;
+
+ 
+}
+
+
+.txt
+{
+
+   width: 10dvh; 
+   margin: 0px;
+   padding: 0px;
+
+}
+
+@media (max-width: 759px)
+{
+
+    .vitrine
+    {
+
+        width: 90%;
+        height: 100%;
+
+    }
+
+    .produto
+    {
+
+        height: 250px;
+        width: 200px;
+
+    }
+
+}

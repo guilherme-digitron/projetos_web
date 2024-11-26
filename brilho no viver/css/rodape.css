@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Georgian:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Quicksand:wght@300..700&display=swap');
 
 /*-_-*/
 
@@ -12,6 +14,32 @@
   
 }
 
+:root
+{
+
+
+    --cor1: #044389;
+    --cor2: #B084CC;
+    --cor2-1: #999DF2;
+    --cor3: #820263;
+    --cor4: #4269d4;
+    --cor5: #2d4991;
+    --cor6: #2A26A6;
+    --cor7: #5C57F2;
+    --cor8: #010E26;
+    --cor9: #22A2F2;
+    --cor10: #35DFF2;
+    --corfont: rgb(131, 131, 131);
+    --corfontbtn: rgb(90, 90, 90);
+    --corfundo: rgb(240, 240, 240);
+    --font1:"Noto Sans Georgian";
+    --font2:"Montserrat";
+
+}
+
+
+/* caixas */
+
 footer
 {
   
@@ -20,13 +48,18 @@ footer
   
 }
 
+
 .lista
 {
   
-  display: grid;
-  background-color: black;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  background-color: var(--cor6);
+  background-image: url(../img/brilho\ no\ viver\ rodape\ \(2\)\ \(1\).png);
+  justify-content: space-around;
+  background-size: cover;
+  background-position: center center;
+  align-items: center;
   padding: 3rem 3.5rem;
   
 }
@@ -35,40 +68,103 @@ footer
 {
   
   display: flex;
-  flex-direction: column;
+  margin: 2rem;
+  margin-top: 1rem;
   gap: 0.75rem;
   list-style: none;
   
 }
 
+.lista-elementos > li > a:hover
+{
+
+  color: rgb(173, 173, 173);
+
+}
+
+
+.midias
+{
+
+  display: flex;
+  gap: 0.75rem;
+
+}
+
+.lista-links
+{
+
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+
+/* links */
+
 .lista-elementos > li > a
 {
   
   text-decoration: none;
-  color: lightgray;
+  color: white;
   
+}
+
+/* socias */
+
+.social
+{
+
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: white;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  overflow: hidden; 
+
+}
+
+.social:hover
+{
+
+  transform: scale(1.6);
+  background-color: #f0f0f0;
+
 }
 
 .direitos
 {
-  
-  background-color: dimgray;
-  display: flex;
-  justify-content: center;
-  padding: 1.5rem;
-  font-size: .9rem;
-  
+
+  color: white;
+  text-align: center;
+  font-family: var(--font2);
+
 }
 
-@media screen and (max-width: 768px)
+ul.lista-elementos
+{
+
+  padding-left: 0px;
+
+}
+
+@media (max-width: 759px)
 {
   
-  .lista
-  {
-    
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
-    
-  }
+  .lista-links > ul
+{
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
+
+}
+
+.lista
+{
+
+  background-size: auto;
+
+}
   
 }

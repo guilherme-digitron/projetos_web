@@ -11,15 +11,62 @@
 
     <!-- importando css aparte -->
      <link rel="stylesheet" href="../css/style-produtos.css">
+     <link rel="stylesheet" href="../css/fixedbtn-style.css">
+     <link rel="stylesheet" href="../css/rodape.css">
      <link rel="stylesheet" href="../css/style-base.css">
+     <link rel="stylesheet" href="../css/menu.css">
 
 
+
+     <!-- scripts -->
+      <script defer src="../javascript/animacao.js"></script>
+      <script defer src="../javascript/fixedbtn.js"></script>
+      <script defer src="../javascript/script.js"></script>
+
+      <link rel="shortcut icon" href="../img/Design_sem_nome__2_-removebg-preview.png" type="image/x-icon">
 
 </head>
 
-    <body>
-        
-        <div class="corpo">
+    <body onresize="tamanho()">
+
+        <header>
+
+            <div class="menu">
+              
+                <!-- logo do site -->
+                <img id="logo" src="../img/Brilho_no_Viver__1_-removebg.png" alt="logo-brilho-no-viver">
+    
+                <!-- menu hanburger -->
+                <div class="mobile-menu" onclick="menu_abrir()">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+    
+                    <!-- lista padrao de links -->
+                    <ul class="nav-list">
+                        <li> <a href="../index.html">Home</a> </li>
+                        <li> <a href="produtos.html">Terapias</a> </li>
+                        <li> <a href="duvidas.html">Perguntas</a> </li>
+                    </ul>
+            </div>
+    
+                 <!-- links no celular -->
+                  <div class="menu2">
+    
+                    <ul class="nav-list-mobile">
+                      <li> <a href="../index.html">Home</a> </li>
+                      <li> <a href="produtos.html">Terapias</a> </li>
+                      <li> <a href="duvidas.html">Perguntas</a> </li>
+                    </ul>
+    
+                  </div>         
+        </header>
+
+        <div class="corpo-vitrine animado">
+            
+           
+
             <div class="vitrine"> <!-- vitrine de produtos -->
             <!-- 1 -->
             
@@ -27,34 +74,46 @@
                         <!-- modal fechado -->
                         <div class="produto">
                             <!-- imagem do modal -->
-                            <div class="img">
-                                <img src="teste.jfif" alt="">
+                            <div class="img img1">
+                                
                             </div>
                             <!-- Button que abre modal -->
-                            <button id="btn1" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">palavra</button>
+                            <button id="btn1" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Mesas Radiônicas</button>
                         </div>  <!-- fim do modal fechado -->
                         <!-- Modal aberto -->
                         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="staticBackdropLabel">EXEMPLO</h1>
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Mesas Radiônicas</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <!-- corpo do modal -->
                                 <div class="modal-body">
                                 <!-- imagem do modal aberto-->
                                 <div class="img-modal-aberto">
-                                    <img src="reike.jpg" alt="">
+                                    <img src="../img/mesa-radionica.jpg" alt="">
                                 </div>
                                 <!-- texto do modal -->
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam consequuntur nemo voluptatem et vel ullam omnis perferendis recusandae hic laudantium deserunt, nostrum voluptates vitae itaque placeat quasi, dolor nam laborum.</p>
+                                 <h2>O que é ?</h2>
+                                <p>Mesa Radiônica é uma <strong>
+                                    terapia de reequilíbrio     energético, que possibilita a
+                                        mudança do campo vibracional,
+                                </strong> é possível usar essa ferramenta para tratar e harmonizar qualquer situação.
+                                    Através dela é aberto um portal energético, onde <strong>são ativadas diversas terapias indicadas pela da radiestesia,</strong>
+                                    ou seja, durante a mesa radiônica o <strong>cliente recebe várias terapias,</strong> o que traz uma imensa potência de
+                                    transformação.</p>
+                                    <hr>
+                                    <h2>Tags</h2>
+                                    <p class="tags">Terapia Sistêmica</p>
+                                    <p class="tags">Cura Emocional</p>
+                                    <p class="tags">Resolução de Padrões Familiares</p>
                                 </div>
                                 <div class="modal-footer">
                                 <!-- Button fecha modal -->
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
                                 <!-- Button para agendar -->
-                                <button type="button" class="btn btn-primary"><a href="#">contato</a></button>
+                                <button type="button" class="btn btn-primary"><a href="https://wa.me/5511948557644?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Mesa%20Radi%C3%B4nica">contato</a></button>
                                 </div>
                             </div>
                             </div>
@@ -66,34 +125,43 @@
                         <!-- modal fechado -->
                         <div class="produto">
                             <!-- imagem do modal -->
-                            <div class="img">
-                                <img src="teste.jfif" alt="">
+                            <div class="img img2">
+
                             </div>
                             <!-- Button que abre modal -->
-                            <button id="btn1" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">palavra</button>
+                            <button id="btn1" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#constelacaofamiliar">Constelação Familiar</button>
                         </div>  <!-- fim do modal fechado -->
                         <!-- Modal aberto -->
-                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal fade" id="constelacaofamiliar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="staticBackdropLabel">EXEMPLO</h1>
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Constelação Familiar</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <!-- corpo do modal -->
                                 <div class="modal-body">
                                 <!-- imagem do modal aberto-->
                                 <div class="img-modal-aberto">
-                                    <img src="reike.jpg" alt="">
+                                    <img src="../img/constelacao-familiar.jpg" alt="">
                                 </div>
                                 <!-- texto do modal -->
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam consequuntur nemo voluptatem et vel ullam omnis perferendis recusandae hic laudantium deserunt, nostrum voluptates vitae itaque placeat quasi, dolor nam laborum.</p>
+                                <h2>O que é ?</h2>
+                                <p>
+                                    <strong>A Constelação Familiar é uma terapia baseada na consciência sistêmica,</strong> capaz de abordar diversas questões. Ela é especialmente indicada para liberar padrões repetitivos e emaranhados que nos limitam ao longo da vida. Com essa abordagem, aprendemos a <strong>reconhecer nosso papel no mundo,</strong> caminhando com mais leveza. </p>
+                                    <p>Muitos problemas recorrentes, como escassez, doenças crônicas, dificuldades em relacionamentos, socialização, sucesso e realizações, <strong>estão frequentemente ligados ao nosso sistema familiar.</strong> As constelações ajudam a identificar e ressignificar esses vínculos, permitindo a liberação desses bloqueios e proporcionando <strong>mais liberdade para alcançar seus objetivos.</strong></p>
+                                    <p class="box-link-zap"><a href="https://chat.whatsapp.com/Jk5J8CTb3HY42m9olqcHwg" class="link-zap">Grupo de Constelação Familiar</a></p>
+                                    <hr>
+                                    <h2>Tags</h2>
+                                        <p class="tags">Terapia Sistêmica</p>
+                                        <p class="tags">Cura Emocional</p>
+                                        <p class="tags">Resolução de Padrões Familiares</p>
                                 </div>
                                 <div class="modal-footer">
                                 <!-- Button fecha modal -->
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
                                 <!-- Button para agendar -->
-                                <button type="button" class="btn btn-primary"><a href="#">contato</a></button>
+                                <button type="button" class="btn btn-primary"><a href="https://wa.me/5511948557644?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Constela%C3%A7%C3%A3o%20Familiar">contato</a></button>
                                 </div>
                             </div>
                             </div>
@@ -105,34 +173,39 @@
                         <!-- modal fechado -->
                         <div class="produto">
                             <!-- imagem do modal -->
-                            <div class="img">
-                                <img src="teste.jfif" alt="">
+                            <div class="img img3">
                             </div>
                             <!-- Button que abre modal -->
-                            <button id="btn1" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">palavra</button>
+                            <button id="btn1" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#multidimensional:">Terapia Multi dimensional</button>
                         </div>  <!-- fim do modal fechado -->
                         <!-- Modal aberto -->
-                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal fade" id="multidimensional:" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="staticBackdropLabel">EXEMPLO</h1>
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Terapia Multi dimensional</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <!-- corpo do modal -->
                                 <div class="modal-body">
                                 <!-- imagem do modal aberto-->
                                 <div class="img-modal-aberto">
-                                    <img src="reike.jpg" alt="">
+                                    <img src="../img/multi-dimensional.jpg" alt="">
                                 </div>
                                 <!-- texto do modal -->
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam consequuntur nemo voluptatem et vel ullam omnis perferendis recusandae hic laudantium deserunt, nostrum voluptates vitae itaque placeat quasi, dolor nam laborum.</p>
+                                <h2>O que é ?</h2>
+                                <p><strong> Focada na cura completa do ser e no processo de ascensão,</strong> essa terapia abrange vidas passadas, presentes, futuras e paralelas. Atua em pessoas ou situações para liberar bloqueios, realizar divórcios energéticos, desfazer magias e limpar maldições. <strong>O trabalho é feito em parceria com mestres ascensos,</strong> anjos e seres de luz, com efeitos que <strong>duram 28 dias</strong> após a sessão.</p>
+                                <hr>
+                                <h2>Tags</h2>
+                                <p class="tags">Ascensão Espiritual</p>
+                                <p class="tags">Cura Energética</p>
+                                <p class="tags">Limpeza Energética</p>
                                 </div>
                                 <div class="modal-footer">
                                 <!-- Button fecha modal -->
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
                                 <!-- Button para agendar -->
-                                <button type="button" class="btn btn-primary"><a href="#">contato</a></button>
+                                <button type="button" class="btn btn-primary"><a href="https://wa.me/5511948557644?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20sess%C3%A3o%20Terapia%20Multidimensional">contato</a></button>
                                 </div>
                             </div>
                             </div>
@@ -144,34 +217,41 @@
                         <!-- modal fechado -->
                         <div class="produto">
                             <!-- imagem do modal -->
-                            <div class="img">
-                                <img src="teste.jfif" alt="">
+                            <div class="img img4">
                             </div>
                             <!-- Button que abre modal -->
-                            <button id="btn1" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">palavra</button>
+                            <button id="btn1" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tameana">Tameana</button>
                         </div>  <!-- fim do modal fechado -->
                         <!-- Modal aberto -->
-                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal fade" id="tameana" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="staticBackdropLabel">EXEMPLO</h1>
+                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Tameana</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
                                 <!-- corpo do modal -->
                                 <div class="modal-body">
                                 <!-- imagem do modal aberto-->
                                 <div class="img-modal-aberto">
-                                    <img src="reike.jpg" alt="">
+                                    <img src="../img/tameanawebp.webp" alt="">
                                 </div>
                                 <!-- texto do modal -->
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam consequuntur nemo voluptatem et vel ullam omnis perferendis recusandae hic laudantium deserunt, nostrum voluptates vitae itaque placeat quasi, dolor nam laborum.</p>
+                                 <h2>O que é ?</h2>
+                                <p><strong>Transmitida pela Consciência Pleiadiana,</strong> essa terapia vibracional profunda alinha sua frequência <strong>para manifestar objetivos e metas.</strong> Ela promove expansão da consciência, harmoniza os chakras, reestrutura o DNA e alinha sua vibração com o campo eletromagnético da Terra, trazendo <strong>mais leveza e sincronia à vida.</strong></p>
+                                    <hr>
+                                    <h2>Tags</h2>
+                                    <p class="tags">Expansão de Consciência</p>
+                                    <p class="tags">Harmonização de Ambientes</p>
+                                    <p class="tags">Transformação Interior</p>
+
                                 </div>
+
                                 <div class="modal-footer">
                                 <!-- Button fecha modal -->
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
                                 <!-- Button para agendar -->
-                                <button type="button" class="btn btn-primary"><a href="#">contato</a></button>
+                                <button type="button" class="btn btn-primary"><a href="https://wa.me/5511948557644?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Tameana">contato</a></button>
                                 </div>
                             </div>
                             </div>
@@ -184,34 +264,41 @@
                     <!-- modal fechado -->
                     <div class="produto">
                         <!-- imagem do modal -->
-                        <div class="img">
-                            <img src="teste.jfif" alt="">
+                        <div class="img img5">
                         </div>
                         <!-- Button que abre modal -->
-                        <button id="btn1" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">palavra</button>
+                        <button id="btn1" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reiki">Reiki</button>
                     </div>  <!-- fim do modal fechado -->
                     <!-- Modal aberto -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal fade" id="reiki" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="staticBackdropLabel">EXEMPLO</h1>
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Reiki</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <!-- corpo do modal -->
                             <div class="modal-body">
                             <!-- imagem do modal aberto-->
                             <div class="img-modal-aberto">
-                                <img src="reike.jpg" alt="">
+                                <img src="../img/reike.jpg" alt="">
                             </div>
                             <!-- texto do modal -->
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam consequuntur nemo voluptatem et vel ullam omnis perferendis recusandae hic laudantium deserunt, nostrum voluptates vitae itaque placeat quasi, dolor nam laborum.</p>
+                             <h2>O que é ?</h2>
+                            <p><strong>O Reiki é uma terapia energética que canaliza a energia universal</strong> para pessoas, animais, plantas, ambientes ou situações. Seus benefícios incluem redução do estresse, relaxamento, equilíbrio emocional, paz mental, restauração da energia vital, fortalecimento do sistema imunológico, além de <strong>promover felicidade, plenitude e bem-estar.</strong></p>
+                            <p class="box-link-zap"><a href="https://chat.whatsapp.com/Jk5J8CTb3HY42m9olqcHwg" class="link-zap">Grupo de Reiki gratuito</a></p>
+                            <hr>
+                            <h2>Tags</h2>
+                            <p class="tags">Equilíbrio e Bem-Estar</p>
+                            <p class="tags">Cura e Relaxamento</p>
+                            <p class="tags">Energia Vital</p>
+                            <p class="tags">Felicidade</p>
                             </div>
                             <div class="modal-footer">
                             <!-- Button fecha modal -->
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
                             <!-- Button para agendar -->
-                            <button type="button" class="btn btn-primary"><a href="#">contato</a></button>
+                            <button type="button" class="btn btn-primary"><a href="https://wa.me/5511948557644?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Reiki.%20">contato</a></button>
                             </div>
                         </div>
                         </div>
@@ -223,34 +310,40 @@
                     <!-- modal fechado -->
                     <div class="produto">
                         <!-- imagem do modal -->
-                        <div class="img">
-                            <img src="teste.jfif" alt="">
+                        <div class="img img6">
                         </div>
                         <!-- Button que abre modal -->
-                        <button id="btn1" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">palavra</button>
+                        <button id="btn1" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#luaazuldeisis">Cura da Lua Azul de Isis</button>
                     </div>  <!-- fim do modal fechado -->
                     <!-- Modal aberto -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal fade" id="luaazuldeisis" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="staticBackdropLabel">EXEMPLO</h1>
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Cura da Lua Azul de Isis</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <!-- corpo do modal -->
                             <div class="modal-body">
                             <!-- imagem do modal aberto-->
                             <div class="img-modal-aberto">
-                                <img src="reike.jpg" alt="">
+                                <img src="../img/isis.webp" alt="">
                             </div>
                             <!-- texto do modal -->
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam consequuntur nemo voluptatem et vel ullam omnis perferendis recusandae hic laudantium deserunt, nostrum voluptates vitae itaque placeat quasi, dolor nam laborum.</p>
+                             <h2>O que é ?</h2>
+                            <p>Essa terapia trata a agitação do ser e desconfortos como nervosismo, ansiedade, guerras internas, insônia e outros conflitos. <strong>Ela promove uma vida mais tranquila, alinhando suas energias internas</strong> em perfeito equilíbrio, levando você a um espaço de paz interior, calma e clareza. Pode ser aplicada em situações de conflito, trazendo paz e clareza para a solução,<strong> além de harmonizar sua energia e restaurar o equilíbrio.</strong></p>
+                            <hr>
+                            <h2>Tags</h2>
+                            <p class="tags">Paz Interior</p>
+                            <p class="tags">Equilíbrio Energético</p>
+                            <p class="tags">Redução de Ansiedade</p>
+                            <p class="tags">Cura de Conflitos Internos</p>
                             </div>
                             <div class="modal-footer">
                             <!-- Button fecha modal -->
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
                             <!-- Button para agendar -->
-                            <button type="button" class="btn btn-primary"><a href="#">contato</a></button>
+                            <button type="button" class="btn btn-primary"><a href="https://wa.me/5511948557644?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20Cura%20da%20Lua%20Azul%20de%20%C3%8Dsis%20">contato</a></button>
                             </div>
                         </div>
                         </div>
@@ -262,34 +355,40 @@
                     <!-- modal fechado -->
                     <div class="produto">
                         <!-- imagem do modal -->
-                        <div class="img">
-                            <img src="teste.jfif" alt="">
+                        <div class="img img7">
                         </div>
                         <!-- Button que abre modal -->
-                        <button id="btn1" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">palavra</button>
+                        <button id="btn1" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registrosakashicos">Registros Akáshicos</button>
                     </div>  <!-- fim do modal fechado -->
                     <!-- Modal aberto -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal fade" id="registrosakashicos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="staticBackdropLabel">EXEMPLO</h1>
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Registros Akáshicos</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <!-- corpo do modal -->
                             <div class="modal-body">
                             <!-- imagem do modal aberto-->
                             <div class="img-modal-aberto">
-                                <img src="reike.jpg" alt="">
+                                <img src="../img/registross.avif" alt="">
                             </div>
                             <!-- texto do modal -->
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam consequuntur nemo voluptatem et vel ullam omnis perferendis recusandae hic laudantium deserunt, nostrum voluptates vitae itaque placeat quasi, dolor nam laborum.</p>
+                             <h2>O que é ?</h2>
+                            <p>Muitos dos bloqueios que enfrentamos hoje são <strong>originados de karmas</strong> e emaranhados do passado, seja nesta ou em outras vidas. Com a abertura dos Registros Akáshicos, <strong>é possível acessar a origem da energia que bloqueia uma questão específica</strong> e ressignificar esse momento, liberando as energias densas. Além disso, essa técnica <strong>promove uma grande expansão de consciência,</strong> ajudando a pessoa a entender e compreender melhor sua essência.</p>
+                            <hr>
+                            <h2>Tags</h2>
+                            <p class="tags">Expansão de Consciência</p>
+                            <p class="tags">Liberação de Karmas</p>
+                            <p class="tags">Ressignificação Energética</p>
+                            <p class="tags">Autoconhecimento</p>
                             </div>
                             <div class="modal-footer">
                             <!-- Button fecha modal -->
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
                             <!-- Button para agendar -->
-                            <button type="button" class="btn btn-primary"><a href="#">contato</a></button>
+                            <button type="button" class="btn btn-primary"><a href="https://wa.me/5511948557644?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20sess%C3%A3o%20Registros%20Ak%C3%A1shicos">contato</a></button>
                             </div>
                         </div>
                         </div>
@@ -301,34 +400,40 @@
                     <!-- modal fechado -->
                     <div class="produto">
                         <!-- imagem do modal -->
-                        <div class="img">
-                            <img src="teste.jfif" alt="">
+                        <div class="img img8">
                         </div>
                         <!-- Button que abre modal -->
-                        <button id="btn1" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">palavra</button>
+                        <button id="btn1" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#thetahealing">Thetahealing</button>
                     </div>  <!-- fim do modal fechado -->
                     <!-- Modal aberto -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal fade" id="thetahealing" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                         <div class="modal-content">
                             <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="staticBackdropLabel">EXEMPLO</h1>
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Thetahealing</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <!-- corpo do modal -->
                             <div class="modal-body">
                             <!-- imagem do modal aberto-->
                             <div class="img-modal-aberto">
-                                <img src="reike.jpg" alt="">
+                                <img src="../img/theta.jpg" alt="">
                             </div>
                             <!-- texto do modal -->
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam consequuntur nemo voluptatem et vel ullam omnis perferendis recusandae hic laudantium deserunt, nostrum voluptates vitae itaque placeat quasi, dolor nam laborum.</p>
+                             <h2>O que é ?</h2>
+                            <p>Essa técnica é realizada <strong>por meio de conversas e visa eliminar crenças negativas e bloqueios,</strong> seja físicos ou energéticos, removendo as causas que impedem a felicidade e realização plena do cliente. Utilizando a onda Theta, que age instantaneamente, a técnica <strong>proporciona grandes mudanças de comportamento e padrões tóxicos já na primeira sessão,</strong> promovendo transformações e resultados incríveis. Pode ser aplicada para trabalhar qualquer questão.</p>
+                            <hr>
+                            <h2>Tags</h2>
+                            <p class="tags">Eliminação de Bloqueios</p>
+                            <p class="tags">Transformação de Padrões</p>
+                            <p class="tags">Mudança Comportamental</p>
+                            <p class="tags">Crescimento Pessoal</p>
                             </div>
                             <div class="modal-footer">
                             <!-- Button fecha modal -->
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">fechar</button>
                             <!-- Button para agendar -->
-                            <button type="button" class="btn btn-primary"><a href="#">contato</a></button>
+                            <button type="button" class="btn btn-primary"><a href="https://wa.me/5511948557644?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20sess%C3%A3o%20de%20ThetaHealing">contato</a></button>
                             </div>
                         </div>
                         </div>
@@ -336,8 +441,48 @@
                 </div> <!-- fim do modal completo -->
             <!-- fim do 8 -->
             </div>  <!-- fim da vitrine -->
+
+
         </div>
 
+         <!-- botoes de fixos -->
+    <div class="fixed-btns">
+        <a href="#" class="topo"></a>
+        <a href="https://wa.me/5511948557644" class="contato-zap" target="_blank"></a>
+      </div>
+  
+    <footer class="footer">
+          
+        <div class="lista">
+  
+          <div class="midias">
+  
+            <img src="../img/Instagram Icon Blue.jpeg" alt="" class="social" onclick="window.open('https://www.instagram.com/brilhonoviver/#', '_blank')">
+  
+            <img src="../img/YouTube Icon Blue.jpeg" alt="" class="social" onclick="window.open('https://www.youtube.com/@brilhonoviver381', '_blank')">
+  
+            <img src="../img/WhatsApp Icon Blue.jpeg" alt="https://wa.me/5511948557644" class="social" onclick="window.open('https://wa.me/5511948557644', '_blank')">
+  
+          </div>
+  
+          <div class="lista-links">
+  
+            <ul class="lista-elementos">
+            
+             <li><a href="../index.html">Home</a></li>
+             <li><a href="termos-de-uso.html">Termos e Condições</a></li>
+             <li><a href="politica-privacidade.html">Política de Privacidade</a></li>
+             <li><a href="https://wa.me/5511948557644">Contato</a></li>
+            
+            </ul>
+  
+          </div>
+  
+          <p class="direitos">Todos os direitos reservados a &copy 2024 Polariz</p>
+  
+        </div>
+        
+      </footer>
 
     </body>
 

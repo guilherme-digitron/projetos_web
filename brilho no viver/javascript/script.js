@@ -36,3 +36,12 @@ function tamanho ()
     }
 
   }
+
+
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const menu2 = document.querySelector('.menu2');
+  
+  mobileMenu.addEventListener('click', () => {
+    menu2.classList.toggle('show'); // Exibe ou oculta o menu
+  });
+  

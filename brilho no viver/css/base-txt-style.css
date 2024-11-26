@@ -1,0 +1,161 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Georgian:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Quicksand:wght@300..700&display=swap');
+
+/*_*/
+
+/*     max-width: 800px; */
+
+
+:root
+{
+
+
+    --cor1: #044389;
+    --cor2: #B084CC;
+    --cor3: #820263;
+    --cor4: #4269d4;
+    --cor5: #2d4991;
+    --cor6: #2A26A6;
+    --cor7: #5C57F2;
+    --cor8: #010E26;
+    --cor9: #22A2F2;
+    --cor10: #35DFF2;
+    --corfont: rgb(131, 131, 131);
+    --corfundo: rgb(240, 240, 240);
+    --corfontbtn: rgb(90, 90, 90);
+    --font1:"Noto Sans Georgian";
+    --font2:"Montserrat";
+
+
+}
+
+*
+{
+
+    color: var(--corfont);
+    font-family: var(--font1);
+
+}
+
+h1
+{
+
+    font-family: var(--font2);
+    color: var(--corfontbtn);
+    font-size: 2rem;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+    text-align: center;
+
+}
+
+h2
+{
+
+    font-family: var(--font2);
+    font-size: 2rem;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+    text-align: left;
+
+
+}
+
+h3
+{
+
+    font-family: var(--font2);
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+    text-align: left;
+
+}
+
+p
+{
+
+    text-indent: 1rem;
+    text-align: justify;
+    margin-bottom: .5rem;
+
+}
+
+body
+{
+
+    background-color: var(--corfundo);
+
+}
+
+.caixa
+{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem 0rem;
+
+}
+
+.corpo, .corpo2
+{
+
+    max-width: 600px;
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+
+}
+
+.corpo2 > p 
+{
+
+    margin-bottom: 1rem;
+
+}
+
+.corpo > ol
+{
+
+    padding-left: 1.5rem;
+
+}
+
+.corpo > ul 
+{
+
+    padding-left: 1.5rem;
+    text-align: justify;
+
+}
+
+.corpo > ol > li
+{
+
+    margin-bottom: 0.5rem;
+    margin-top: .5rem;
+    text-align: justify;
+
+}
+
+.corpo > ul > li
+{
+
+    margin-bottom: 0.5rem;
+    margin-top: .5rem;
+
+}
+
+.foto2
+{
+
+    width: 100%;
+    height: 40dvh;
+    color: #010E26;
+    background-image: url(../img/img-historia.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}

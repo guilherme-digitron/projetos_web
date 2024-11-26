@@ -20,16 +20,21 @@
 
 }
 
-:root
-{
-
-
-
-}
-
 main
 {
 
     height: 100dvh;
 
 }
+
+
+.animado {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease;
+  }
+
+.animado.visivel {
+    opacity: 1;
+    transform: translateY(0);
+  }

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Georgian:wght@100..900&display=swap');
 
+/* links */
 
 a {
   color: white;
@@ -11,22 +12,50 @@ a:hover{
   color: rgb(189, 189, 189);
 }
 
-.logo{
-  font-size: 24px;
-  letter-spacing: 4px;
+/* corpo do cabeçalho */
+
+header
+{
+
+  height: 30dvh;
+  background-color: #000000;
+  background-image: url(../img/fundo-header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+header * {
+  position: relative;
+  z-index: 2;
 }
 
 .menu
 {
 
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   font-family: "Noto Sans Georgian";
-  background-color: #000000;
-  height: 12dvh;
+  height: 15dvh;
   
 }
+
+/* lista de links */
 
 .nav-list{
   list-style: none;
@@ -40,39 +69,28 @@ a:hover{
   
 }
 
+/* menu para celular */
+
 .menu2
 {
 
-display: none;
-position: absolute;
-left: 60%;
-width: 40%;
-padding: 1rem;
-background-color: white;
-
-}
-
-.menu2 > ul
-{
-
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-}
-
-
-.menu2 > ul > li > a
-{
-
-  color: black;
+  display: none;
+  position: absolute; /* Para alinhar com .mobile-menu */
+  top: 35%; /* Ajuste para alinhar com o .mobile-menu */
+  right: 7%; 
+  width: 80%;
+  border-radius: 8px;
+ 
 
 }
 
 .mobile-menu{
+  /* display: none;
+  cursor: pointer;
+  right: 7%; */
   display: none;
+  position: absolute; /* Torna o ícone fixo na página */
+  right: 7%;
   cursor: pointer;
 }
 
@@ -81,33 +99,152 @@ background-color: white;
   height: 2px;
   background: #fff;
   margin: 8px;
+  border-radius: 50px;
+}
+
+.menu2.show {
+  display: block; /* Torna o menu visível quando a classe 'show' é adicionada */
+}
+
+.menu2 > ul
+{
+
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+
+}
+
+.menu2 > ul > li {
+  opacity: 0;
+  transform: translateY(-20px); /* Posição inicial dos links fora da tela */
+  animation: dropDown 0.5s forwards; /* Aplica a animação aos links */
+}
+
+.menu2 > ul > li:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.menu2 > ul > li:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.menu2 > ul > li:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.menu2 > ul > li:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+
+.menu2 > ul > li > a
+{
+
+  color: aliceblue;
+  display: inline-block;
+  border: 2px solid white;
+  border-radius: 20px;
+  margin-bottom: .5rem;
+  padding: .5rem 1rem;
+
+}
+
+.menu2 > ul > li > a:hover
+{
+
+  background-color: white;
+  color: #000000;
+
+}
+
+
+/* Keyframes para a animação de queda */
+@keyframes dropDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); /* Começa fora da tela */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Termina na posição original */
+  }
+}
+
+
+.nav-list:active {
+  transform: translateX(0) ;
+}
+
+#logo
+{
+
+  height: 200px;
+
+}
+
+@media (min-width: 760px)
+{
+
+    #logo
+  {
+
+    height: 200px;
+
+  }
+
+  .menu
+  {
+  
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+  }
+
 }
 
 @media (max-width: 759px)
 {
 
 
-.nav-list{
+  .nav-list{
 
-  display: none;
+    display: none;
+
+  }
+
+
+  .mobile-menu{
+    display: block;
+    top: 20%;
+  }
+
+  .menu
+  {
+  
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+  }
 
 }
 
+.nav-list 
+{
 
-.mobile-menu{
-  display: block;
+    padding: 0;
+    margin: 0;
+
 }
 
+.nav-list > ul
+{
+
+  text-align: center;
+
 }
-
-.nav-list:active {
-  transform: translateX(0) ;
-}
-
-.logo{
-  width: 200px;
-}
-
-
-
 

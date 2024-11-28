@@ -162,6 +162,13 @@ strong
 
 }
 
+.txt-2 > p 
+{
+
+    text-align: justify;
+
+}
+
 .txt-2-final
 {
 

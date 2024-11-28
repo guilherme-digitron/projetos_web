@@ -17,9 +17,10 @@ a:hover{
 header
 {
 
-  height: 30dvh;
+  height: 50dvh;
   background-color: #000000;
   background-image: url(../img/fundo-header.jpg);
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
@@ -65,135 +66,27 @@ header * {
 
 .nav-list > li{
   letter-spacing: 3px;
-  margin-left: 32px;
-  
+
 }
 
-/* menu para celular */
-
-.menu2
+.link-meio
 {
 
-  display: none;
-  position: absolute; /* Para alinhar com .mobile-menu */
-  top: 35%; /* Ajuste para alinhar com o .mobile-menu */
-  right: 7%; 
-  width: 80%;
-  border-radius: 8px;
- 
+  margin-left: 1rem;
+  margin-right: 1rem;
 
-}
-
-.mobile-menu{
-  /* display: none;
-  cursor: pointer;
-  right: 7%; */
-  display: none;
-  position: absolute; /* Torna o ícone fixo na página */
-  right: 7%;
-  cursor: pointer;
-}
-
-.mobile-menu > div{
-  width: 32px;
-  height: 2px;
-  background: #fff;
-  margin: 8px;
-  border-radius: 50px;
-}
-
-.menu2.show {
-  display: block; /* Torna o menu visível quando a classe 'show' é adicionada */
-}
-
-.menu2 > ul
-{
-
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-  justify-content: center;
-
-}
-
-.menu2 > ul > li {
-  opacity: 0;
-  transform: translateY(-20px); /* Posição inicial dos links fora da tela */
-  animation: dropDown 0.5s forwards; /* Aplica a animação aos links */
-}
-
-.menu2 > ul > li:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-.menu2 > ul > li:nth-child(2) {
-  animation-delay: 0.3s;
-}
-
-.menu2 > ul > li:nth-child(3) {
-  animation-delay: 0.5s;
-}
-
-.menu2 > ul > li:nth-child(4) {
-  animation-delay: 0.7s;
-}
-
-
-.menu2 > ul > li > a
-{
-
-  color: aliceblue;
-  display: inline-block;
-  border: 2px solid white;
-  border-radius: 20px;
-  margin-bottom: .5rem;
-  padding: .5rem 1rem;
-
-}
-
-.menu2 > ul > li > a:hover
-{
-
-  background-color: white;
-  color: #000000;
-
-}
-
-
-/* Keyframes para a animação de queda */
-@keyframes dropDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px); /* Começa fora da tela */
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0); /* Termina na posição original */
-  }
-}
-
-
-.nav-list:active {
-  transform: translateX(0) ;
 }
 
 #logo
 {
 
-  height: 200px;
+  height: 60%;
 
 }
 
+
 @media (min-width: 760px)
 {
-
-    #logo
-  {
-
-    height: 200px;
-
-  }
 
   .menu
   {
@@ -210,16 +103,11 @@ header * {
 {
 
 
-  .nav-list{
+  #logo
+  {
 
-    display: none;
+    height: 75%;
 
-  }
-
-
-  .mobile-menu{
-    display: block;
-    top: 20%;
   }
 
   .menu
@@ -230,6 +118,8 @@ header * {
     height: 100%;
     
   }
+
+
 
 }
 

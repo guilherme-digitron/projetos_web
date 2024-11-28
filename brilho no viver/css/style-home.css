@@ -101,10 +101,7 @@ body
 .foto
 {
 
-    background-image: url(../img/foto-perfi-cor.png);
-    background-size: cover;
-    width: 30dvh;
-    height: 30dvh;
+    width: 30%;
     border-radius: 50%;
     margin: 1rem;
     
@@ -253,10 +250,22 @@ button[name="quem-sou"]:hover
 
     }
 
+    .foto
+{
+
+    width: 50%;
+    border-radius: 50%;
+    margin: 1rem;
+    
+}
+
     .txt
     {
 
+        width: 80%;
         padding: 0;
+        margin-left: 0;
+        margin-right: 0;
 
     }
 

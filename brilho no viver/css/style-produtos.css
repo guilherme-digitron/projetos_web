@@ -343,3 +343,8 @@ button > a
     }
 
 }
+
+.modal-backdrop{
+    height: 0;
+    
+}

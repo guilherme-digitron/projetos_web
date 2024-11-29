@@ -84,9 +84,9 @@ body
 .btns
 {
 
-    height: 10dvh;
+    height: auto;
     width: 100%;
-    padding: 1rem;
+    padding: 2rem;
     padding-top: 0;
     display: flex;
     justify-content: center;
@@ -274,7 +274,9 @@ button[name="quem-sou"]:hover
 {
 
     width: 80dvw;
+    font-size: 1rem;
  
 }
+
 
 }

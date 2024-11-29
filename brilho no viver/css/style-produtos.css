@@ -220,7 +220,7 @@ p
 .img.img6
 {
 
-    background-image: url(../img/isis.webp);
+    background-image: url(../img/isis-img.jpg);
     background-position: center center;
 
 }
@@ -320,6 +320,11 @@ button > a
         width: 208.33px;
 
     }
+
+    p
+{
+    text-align: center;
+}
 
 }
 

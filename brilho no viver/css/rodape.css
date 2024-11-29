@@ -110,6 +110,13 @@ footer
   
 }
 
+.lista-elementos > li
+{
+
+  width: 100dvw;
+
+}
+
 /* socias */
 
 .social
@@ -146,6 +153,7 @@ ul.lista-elementos
   padding-left: 0px;
 
 }
+
 
 @media (max-width: 759px)
 {

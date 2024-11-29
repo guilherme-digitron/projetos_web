@@ -55,9 +55,9 @@ body
 {
 
     height: auto;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-top: 2rem;
+    margin-left: 1.3rem;
+    margin-right: 1.3rem;
+    margin-top: 1.3rem;
     background-color: var(--corfundo);
     display: flex;
     align-items: center;

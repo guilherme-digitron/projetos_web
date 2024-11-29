@@ -110,12 +110,7 @@ footer
   
 }
 
-.lista-elementos > li
-{
 
-  width: 100dvw;
-
-}
 
 /* socias */
 
@@ -172,6 +167,14 @@ ul.lista-elementos
 {
 
   background-size: auto;
+
+}
+
+
+.lista-elementos > li
+{
+
+  width: 100dvw;
 
 }
   

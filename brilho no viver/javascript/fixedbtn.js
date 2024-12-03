@@ -5,10 +5,11 @@ function scrollToTop() {
 function updateButtonPosition() {
     const button = document.querySelector('.fixed-btns');
     const footer = document.querySelector('.footer');
-    
+    if (!footer) return; // Verifica se o rodapé existe
+
     const footerRect = footer.getBoundingClientRect();
     const windowHeight = window.innerHeight;
-    
+
     // Verifica se o rodapé está visível na janela
     if (footerRect.top < windowHeight) {
         // Quando o rodapé estiver visível, o botão deve parar na parte superior do rodapé

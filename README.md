@@ -1,6 +1,6 @@
 # Portfólio de Projetos Web
 
-Olá! 👋 Bem-vindo(a) ao meu repositório de projetos web. Sou um desenvolvedor apaixonado por tecnologia e por transformar ideias em realidade digital. Este espaço guarda meus pequenos testes e estudos em web
+Olá! 👋 Bem-vindo(a) ao meu repositório de projetos web. Sou um desenvolvedor apaixonado por tecnologia e por transformar ideias em realidade digital. Este espaço guarda meus pequenos testes e estudos em web.
 
 ## 🚀 Tecnologias e Ferramentas
 
@@ -22,7 +22,7 @@ Sinta-se à vontade para explorar o código e ver as aplicações em funcionamen
 
 ### 1. Brilho no Viver
 
-<a href="[LINK PARA O PROJETO ONLINE]">
+<a href="https://guilherme-digitron.github.io/projetos_web/brilho%20no%20viver/paginas/duvidas.html">
   <img align="center" src="[LINK PARA A IMAGEM/GIF DO PROJETO]" alt="Nome do Projeto 1">
 </a>
 <br>
@@ -37,5 +37,5 @@ Sinta-se à vontade para explorar o código e ver as aplicações em funcionamen
 **🛠️ Tecnologias utilizadas:** HTML, CSS, JavaScript.
 
 <p align="left">
-  <a href="[LINK PARA O PROJETO ONLINE]" target="_blank">
+  <a href="https://guilherme-digitron.github.io/projetos_web/brilho%20no%20viver/paginas/duvidas.html" target="_blank">
     <img src="

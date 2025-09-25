@@ -20,10 +20,8 @@ Sinta-se à vontade para explorar o código e ver as aplicações em funcionamen
 
 ---
 
-### 1. Brilho no Viver
-
 <a href="https://guilherme-digitron.github.io/projetos_web/brilho%20no%20viver/paginas/duvidas.html">
-  Link para acesso
+  ##Brilho no Viver
 </a>
 <br>
 
@@ -34,4 +32,4 @@ Sinta-se à vontade para explorar o código e ver as aplicações em funcionamen
 - [x] Funcionalidade 2 (Redirecionamento para diferentes meios de contato)
 - [x] Funcionalidade 3 (Conteúdo informativo e de consientização)
 
-**🛠️ Tecnologias utilizadas:** HTML, CSS, JavaScript.
+**Tecnologias utilizadas:** HTML, CSS, JavaScript.

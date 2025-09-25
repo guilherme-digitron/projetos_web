@@ -20,7 +20,7 @@ Sinta-se à vontade para explorar o código e ver as aplicações em funcionamen
 
 ---
 
-<a href="https://guilherme-digitron.github.io/projetos_web/brilho%20no%20viver/paginas/duvidas.html">
+<a href="https://guilherme-digitron.github.io/projetos_web/brilho%20no%20viver/index.html">
   Brilho no Viver
 </a>
 <br>
@@ -36,7 +36,7 @@ Sinta-se à vontade para explorar o código e ver as aplicações em funcionamen
 
 ---
 
-<a href="https://guilherme-digitron.github.io/projetos_web/brilho%20no%20viver/paginas/duvidas.html">
+<a href="https://guilherme-digitron.github.io/projetos_web/web_game_saude_mental/index.html">
   Web Game (Saúde Mental)
 </a>
 <br>

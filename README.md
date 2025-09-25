@@ -25,11 +25,27 @@ Sinta-se à vontade para explorar o código e ver as aplicações em funcionamen
 </a>
 <br>
 
-> Projeto feito como TCC para o curso de desenvolvimento web do IOS, tem como objetivo ser a sulução web de um pequeno empreendedor, no caso a empresa Brilho no Viver Terapias
+> Projeto feito como TCC para o curso de desenvolvimento web do IOS, tem como objetivo ser a sulução web de um pequeno empreendedor, no caso a empresa Brilho no Viver Terapias.
 
 **✨ Principais Funcionalidades:**
 - [x] Funcionalidade 1 (Catalogo de produtos)
 - [x] Funcionalidade 2 (Redirecionamento para diferentes meios de contato)
 - [x] Funcionalidade 3 (Conteúdo informativo e de consientização)
+
+**Tecnologias utilizadas:** HTML, CSS, JavaScript.
+
+---
+
+<a href="https://guilherme-digitron.github.io/projetos_web/brilho%20no%20viver/paginas/duvidas.html">
+  Web Game (Saúde Mental)
+</a>
+<br>
+
+> Projeto feito para conpetição do programa Juntô, com o objetivo de orientar jovens sobre o uso conciente da tecnologia e bem estar mental.
+
+**✨ Principais Funcionalidades:**
+- [x] Funcionalidade 1 (Concientização)
+- [x] Funcionalidade 2 (POO)
+- [x] Funcionalidade 3 (Gamificação)
 
 **Tecnologias utilizadas:** HTML, CSS, JavaScript.

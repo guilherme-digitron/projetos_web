@@ -20,6 +20,34 @@ document.addEventListener('DOMContentLoaded', () => {
     // Estado do Jogo
     let gameState = {};
 
+    // NOVO: Cartas de Tutorial
+    const tutorialCards = [
+        {
+            character: "Guia",
+            text: "Bem-vindo ao Equilíbrio Digital. Para tomar uma decisão, arraste este cartão para a esquerda ou para a direita.",
+            choiceLeft: "Entendi!",
+            choiceRight: "OK!",
+            effectLeft: { mental: 0, social: 0, energy: 0, online: 0 },
+            effectRight: { mental: 0, social: 0, energy: 0, online: 0 },
+        },
+        {
+            character: "Guia",
+            text: "As barras no topo representam sua vida. Cérebro (Saúde Mental), Pessoas (Vida Social), Raio (Energia) e Wi-Fi (Conexão Online).",
+            choiceLeft: "Vou ficar de olho.",
+            choiceRight: "Parece simples.",
+            effectLeft: { mental: 0, social: 0, energy: 0, online: 0 },
+            effectRight: { mental: 0, social: 0, energy: 0, online: 0 },
+        },
+        {
+            character: "Guia",
+            text: "Suas escolhas afetam essas barras. Se qualquer uma delas chegar a 0% ou 100%, sua jornada termina. Mantenha o equilíbrio. Boa sorte!",
+            choiceLeft: "Estou pronto!",
+            choiceRight: "Vamos começar!",
+            effectLeft: { mental: 5, social: 5, energy: 5, online: 5 },
+            effectRight: { mental: 5, social: 5, energy: 5, online: 5 },
+        }
+    ];
+
     // Dados das Cartas
     const cards = [
         {
@@ -127,14 +155,24 @@ document.addEventListener('DOMContentLoaded', () => {
         card.style.transition = 'transform 0.4s ease';
         const flyOutX = direction === 'right' ? window.innerWidth : -window.innerWidth;
         card.style.transform = `translateX(${flyOutX}px) rotate(${direction === 'right' ? 30 : -30}deg)`;
+        
+        // MODIFICADO: Lógica para pegar a carta correta (tutorial ou normal)
+        const currentCardData = gameState.inTutorial 
+            ? tutorialCards[gameState.tutorialIndex]
+            : cards[gameState.currentCardIndex];
 
-        const cardData = cards[gameState.currentCardIndex];
-        const effect = direction === 'right' ? cardData.effectRight : cardData.effectLeft;
+        const effect = direction === 'right' ? currentCardData.effectRight : currentCardData.effectLeft;
 
         setTimeout(() => {
             updateStats(effect);
-            gameState.day++;
-            gameState.currentCardIndex = (gameState.currentCardIndex + 1) % cards.length;
+            
+            // MODIFICADO: Lógica para avançar o dia e o índice da carta
+            if (gameState.inTutorial) {
+                gameState.tutorialIndex++;
+            } else {
+                gameState.day++;
+                gameState.currentCardIndex = (gameState.currentCardIndex + 1) % cards.length;
+            }
             
             if (!checkForGameOver()) {
                 loadNextCard();
@@ -150,10 +188,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Lógica do Jogo
     function startGame() {
+        // MODIFICADO: Estado inicial inclui controle de tutorial
         gameState = {
             stats: { mental: 50, social: 50, energy: 50, online: 50 },
-            day: 1,
-            currentCardIndex: 0
+            day: 0, // Começa no dia 0 para o tutorial
+            currentCardIndex: 0,
+            inTutorial: true,
+            tutorialIndex: 0
         };
         shuffleArray(cards);
         gameOverScreen.classList.remove('visible');
@@ -162,7 +203,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function loadNextCard() {
-        const cardData = cards[gameState.currentCardIndex];
+        // MODIFICADO: Decide se carrega uma carta de tutorial ou uma normal
+        let cardData;
+        if (gameState.inTutorial) {
+            if (gameState.tutorialIndex < tutorialCards.length) {
+                cardData = tutorialCards[gameState.tutorialIndex];
+            } else {
+                // Fim do tutorial, começa o jogo real
+                gameState.inTutorial = false;
+                gameState.day = 1; // Inicia o dia 1
+                cardData = cards[gameState.currentCardIndex];
+            }
+        } else {
+            cardData = cards[gameState.currentCardIndex];
+        }
+
         card.style.opacity = 0;
         setTimeout(() => {
             resetCardPosition();
@@ -187,10 +242,19 @@ document.addEventListener('DOMContentLoaded', () => {
         socialBar.style.width = `${gameState.stats.social}%`;
         energyBar.style.width = `${gameState.stats.energy}%`;
         onlineBar.style.width = `${gameState.stats.online}%`;
-        dayCounter.textContent = `Dia ${gameState.day}`;
+        
+        // MODIFICADO: Mostra "Tutorial" em vez de "Dia 0"
+        if (gameState.inTutorial) {
+            dayCounter.textContent = 'Tutorial';
+        } else {
+            dayCounter.textContent = `Dia ${gameState.day}`;
+        }
     }
     
     function checkForGameOver() {
+        // Não verifica game over durante o tutorial
+        if (gameState.inTutorial) return false;
+
         const stats = gameState.stats;
         let gameOver = false;
         let message = "";

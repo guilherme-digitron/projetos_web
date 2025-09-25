@@ -1,4 +1,4 @@
-# Portfólio de Projetos Web de [Guilherme da Silva Cordeiro]
+# Portfólio de Projetos Web
 
 Olá! 👋 Bem-vindo(a) ao meu repositório de projetos web. Sou um desenvolvedor apaixonado por tecnologia e por transformar ideias em realidade digital. Este espaço guarda meus pequenos testes e estudos em web
 

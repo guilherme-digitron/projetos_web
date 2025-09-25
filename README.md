@@ -21,7 +21,7 @@ Sinta-se à vontade para explorar o código e ver as aplicações em funcionamen
 ---
 
 <a href="https://guilherme-digitron.github.io/projetos_web/brilho%20no%20viver/paginas/duvidas.html">
-  ##Brilho no Viver
+  Brilho no Viver
 </a>
 <br>
 
